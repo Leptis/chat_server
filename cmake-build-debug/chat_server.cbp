@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/leptis/CLionProjects/chat_server/main.cpp">
+		<Unit filename="/home/leptis/CLionProjects/chat_server/src/main.cpp">
 			<Option target="chat_server"/>
 		</Unit>
 		<Unit filename="/home/leptis/CLionProjects/chat_server/CMakeLists.txt">
