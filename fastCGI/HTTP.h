@@ -28,8 +28,10 @@ extern char ** environ;
 //#include "fcgi_stdio.h"
 #include "fcgiapp.h"
 #include "unistd.h"
+#include <nlohmann/json.hpp>
 
 using namespace std;
+using nlohmann::json;
 
 #ifndef HTTP_H
 #define	HTTP_H
@@ -221,6 +223,8 @@ public:
 
     void print_Files();
 
+    json json_post;
+
 private:
     streambuf * cin_streambuf;
     streambuf * cout_streambuf;
@@ -245,8 +249,8 @@ private:
     
     int buff_index;
     char buff[BUFF_SIZE+1];
-    char * c_len_str;
-    char * c_type_str;
+    string len_str;
+    string type_str;
     string boundary;
     string _boundary;
     int blockCount;

@@ -98,7 +98,12 @@ void *FCGIHandler::doit(void *a)
 
 
         request_handler.attachStreams();
-        request_handler.loadPostData();
+        try {
+            request_handler.loadPostData();
+        }
+        catch(...){
+        }
+
 
         pthread_mutex_lock(&rh_queue_mutex);
         params->rh_queue.push(&request_handler);    // Засовываем запрос в единую очередь, а которой они ждут обработки

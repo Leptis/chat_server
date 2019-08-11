@@ -6,6 +6,9 @@
  */
 
 #include "HTTP.h"
+#include <nlohmann/json.hpp>
+
+using nlohmann::json;
 
 HTTP::HTTP(unsigned int new_sock_id)
 {
@@ -114,8 +117,8 @@ void HTTP::loadGetItems(string str)
 void HTTP::loadPostData() 
 {
     int ct = 0;
-    this->c_len_str = FCGX_GetParam("CONTENT_LENGTH", this->request.envp);
-    this->c_type_str = FCGX_GetParam("CONTENT_TYPE", this->request.envp);
+    this->len_str = FCGX_GetParam("CONTENT_LENGTH", this->request.envp);
+    this->type_str = FCGX_GetParam("CONTENT_TYPE", this->request.envp);
     this->c_len = STDIN_MAX;
     this->blockCount = 0;
     this->buff_index = BUFF_SIZE;
@@ -123,129 +126,29 @@ void HTTP::loadPostData()
     this->_POST.clear();
     this->_Files.clear();
 
-    if (c_len_str)
+    if (this->c_len = atoi(len_str.c_str()))
     {
+        if (type_str == "application/json") {
+            if (this->c_len > STDIN_MAX) {
+                cerr << "Input is too big\n" << endl;
+            }
+//            char buff[c_len];
+            string inp = "";
+            for (int i = 0; i < c_len; i++) {
+                inp.push_back(FCGX_GetChar(request.in));
+            }
+//            string input(buff);
 
-        this->c_len = strtol(c_len_str, &c_len_str, 10);
-        //cerr << "CONTENT_LENGTH - " << this->clen << endl;
-        if (*c_len_str)
-        {
-            /*
-             * cerr << "can't parse \"CONTENT_LENGTH="
-                 << FCGX_GetParam("CONTENT_LENGTH", this->request.envp)
-                 << "\"\n";
-            */
+            json_post = json::parse(inp);
+        }else{
+            cerr << "Can't parse CONTENT_TYPE\n" << endl;
             return;
         }
-        if (this->c_len > STDIN_MAX) this->c_len = STDIN_MAX;
-        //cerr << "CONTENT_TYPE = " << FCGX_GetParam("CONTENT_TYPE", this->request.envp) << endl;
-        if(!strcmp(c_type_str, "text/plain") || !strcmp(c_type_str, "application/x-www-form-urlencoded")) ct = 1;
-        else 
-        {
-            char*tmp = c_type_str;
-            char*end = c_type_str;
-            while(*end++) ;
-            while(*tmp != ';' && *tmp) tmp++;
-            if(!*tmp)
-            {
-                //Неизвестный CONTENT_TYPE
-                // Надо бы отправить exception...
-                // А пока
-                cerr << "Can't parse CONTENT_TYPE" << endl;
-                return;
-            }
-            string cty(c_type_str, tmp-c_type_str);
-            string bound(tmp+2+9, end-(tmp+2)-10);
-            this->_boundary = bound;
-            this->boundary = "--"+this->_boundary;
-            if(strcmp(cty.c_str(), "multipart/form-data"))
-            {
-                //Неизвестный CONTENT_TYPE
-                // Надо бы отправить exception...
-                // А пока
-                //cerr << "Unknown CONTENT_TYPE" << endl;
-                return;
-            }
-            //cerr << "ctype = " << cty << endl;
-            //cerr << "boundary = " << this->_boundary << endl;
-            //cout << "<br>" << this->boundary << "<br>";
-        }
 
-        //cerr << "====\nReading blocks from stdin" << endl;
-        char ch = 0;
-        int state = 0;
-        string paramName;
-        string value;
-        bool is_last = false;
-        if(ct == 1)
-        {
-
-            // text/plain and application/x-www-form-urlencoded
-            //cerr << "parsing - text/plain and application/x-www-form-urlencoded" << endl;
-            for(int i = 0; i < this->c_len; i++)
-            {
-
-                //printf(ch);
-                is_last = (i == (this->c_len - 1));
-                ch = this->getCharFromStdin();
-                //cout << ch;
-
-                //cout << ch;
-                if(ch == '=')
-                {
-                    //cerr << "POST - " << paramName;
-                    state = 1;
-                    continue;
-                }
-                if(ch == '&' || ch == '\r')
-                {
-                    //cerr << " = " << value << endl;
-                    state = 0;
-                    addPostItem(paramName, value);
-                    paramName.clear();
-                    value.clear();
-                    continue;
-                }
-                if(ch == '\n'){
-                    continue;
-                }
-                if(is_last)
-                {
-                    value+=ch;
-                    //cerr << " = " << value << endl;
-                    state = 0;
-                    addPostItem(paramName, value);
-                    paramName.clear();
-                    value.clear();
-                    continue;
-                }
-                switch(state)
-                {
-                    case 0:
-                        paramName+=ch;
-                        break;
-                    case 1:
-                        value+=ch;
-                        break;
-                }
-            }
-        }
-        else
-        {
-            //cout << 100;
-            // multipart/form-data
-            char ch = 0;
-            //cerr << "parsing - multipart/form-data" << endl;
-            this->boundary_length = this->boundary.size();
-            parseMultiPart();
-        }
-        //cerr << "Stop reading\n====" << endl;
     }
     else
     {
-        //cerr << "CONTENT_LENGTH is empty" << endl;
-        this->buff[0] = 0;
-        c_len = 0;
+        cerr << "CONTENT_LENGTH is empty\n" << endl;
     }
 }
 

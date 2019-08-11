@@ -82,6 +82,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/leptis/CLionProjects/chat_server/fastCGI/HTTP.cpp">
+			<Option target="chat_server"/>
+		</Unit>
+		<Unit filename="/home/leptis/CLionProjects/chat_server/fastCGI/HTTP.h">
+			<Option target="chat_server"/>
+		</Unit>
+		<Unit filename="/home/leptis/CLionProjects/chat_server/fastCGI/fcgi.cpp">
+			<Option target="chat_server"/>
+		</Unit>
+		<Unit filename="/home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.cpp">
+			<Option target="chat_server"/>
+		</Unit>
+		<Unit filename="/home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.h">
+			<Option target="chat_server"/>
+		</Unit>
 		<Unit filename="/home/leptis/CLionProjects/chat_server/src/main.cpp">
 			<Option target="chat_server"/>
 		</Unit>
