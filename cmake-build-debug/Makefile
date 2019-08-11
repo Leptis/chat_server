@@ -123,32 +123,113 @@ chat_server/fast:
 	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/build
 .PHONY : chat_server/fast
 
-main.o: main.cpp.o
+fastCGI/HTTP.o: fastCGI/HTTP.cpp.o
 
-.PHONY : main.o
+.PHONY : fastCGI/HTTP.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/main.cpp.o
-.PHONY : main.cpp.o
+fastCGI/HTTP.cpp.o:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o
+.PHONY : fastCGI/HTTP.cpp.o
 
-main.i: main.cpp.i
+fastCGI/HTTP.i: fastCGI/HTTP.cpp.i
 
-.PHONY : main.i
+.PHONY : fastCGI/HTTP.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/main.cpp.i
-.PHONY : main.cpp.i
+fastCGI/HTTP.cpp.i:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.i
+.PHONY : fastCGI/HTTP.cpp.i
 
-main.s: main.cpp.s
+fastCGI/HTTP.s: fastCGI/HTTP.cpp.s
 
-.PHONY : main.s
+.PHONY : fastCGI/HTTP.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/main.cpp.s
-.PHONY : main.cpp.s
+fastCGI/HTTP.cpp.s:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.s
+.PHONY : fastCGI/HTTP.cpp.s
+
+fastCGI/fcgi.o: fastCGI/fcgi.cpp.o
+
+.PHONY : fastCGI/fcgi.o
+
+# target to build an object file
+fastCGI/fcgi.cpp.o:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o
+.PHONY : fastCGI/fcgi.cpp.o
+
+fastCGI/fcgi.i: fastCGI/fcgi.cpp.i
+
+.PHONY : fastCGI/fcgi.i
+
+# target to preprocess a source file
+fastCGI/fcgi.cpp.i:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.i
+.PHONY : fastCGI/fcgi.cpp.i
+
+fastCGI/fcgi.s: fastCGI/fcgi.cpp.s
+
+.PHONY : fastCGI/fcgi.s
+
+# target to generate assembly for a file
+fastCGI/fcgi.cpp.s:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.s
+.PHONY : fastCGI/fcgi.cpp.s
+
+fastCGI/fcgiHandler.o: fastCGI/fcgiHandler.cpp.o
+
+.PHONY : fastCGI/fcgiHandler.o
+
+# target to build an object file
+fastCGI/fcgiHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o
+.PHONY : fastCGI/fcgiHandler.cpp.o
+
+fastCGI/fcgiHandler.i: fastCGI/fcgiHandler.cpp.i
+
+.PHONY : fastCGI/fcgiHandler.i
+
+# target to preprocess a source file
+fastCGI/fcgiHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.i
+.PHONY : fastCGI/fcgiHandler.cpp.i
+
+fastCGI/fcgiHandler.s: fastCGI/fcgiHandler.cpp.s
+
+.PHONY : fastCGI/fcgiHandler.s
+
+# target to generate assembly for a file
+fastCGI/fcgiHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.s
+.PHONY : fastCGI/fcgiHandler.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... chat_server"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... fastCGI/HTTP.o"
+	@echo "... fastCGI/HTTP.i"
+	@echo "... fastCGI/HTTP.s"
+	@echo "... fastCGI/fcgi.o"
+	@echo "... fastCGI/fcgi.i"
+	@echo "... fastCGI/fcgi.s"
+	@echo "... fastCGI/fcgiHandler.o"
+	@echo "... fastCGI/fcgiHandler.i"
+	@echo "... fastCGI/fcgiHandler.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

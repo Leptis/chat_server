@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leptis/CLionProjects/chat_server/main.cpp" "/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles/chat_server.dir/main.cpp.o"
+  "/home/leptis/CLionProjects/chat_server/fastCGI/HTTP.cpp" "/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o"
+  "/home/leptis/CLionProjects/chat_server/fastCGI/fcgi.cpp" "/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o"
+  "/home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.cpp" "/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o"
+  "/home/leptis/CLionProjects/chat_server/src/main.cpp" "/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles/chat_server.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

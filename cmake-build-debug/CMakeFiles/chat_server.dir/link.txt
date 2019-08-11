@@ -1,1 +1,1 @@
-/usr/bin/g++  -g   CMakeFiles/chat_server.dir/main.cpp.o  -o chat_server 
+/usr/bin/g++   -pthread -std=c++11 -lfcgi++ -lfcgi -lpq -lpqxx -g   CMakeFiles/chat_server.dir/src/main.cpp.o CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o  -o chat_server 

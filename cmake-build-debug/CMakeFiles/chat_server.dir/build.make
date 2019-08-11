@@ -57,30 +57,75 @@ include CMakeFiles/chat_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/chat_server.dir/flags.make
 
-CMakeFiles/chat_server.dir/main.cpp.o: CMakeFiles/chat_server.dir/flags.make
-CMakeFiles/chat_server.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chat_server.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chat_server.dir/main.cpp.o -c /home/leptis/CLionProjects/chat_server/main.cpp
+CMakeFiles/chat_server.dir/src/main.cpp.o: CMakeFiles/chat_server.dir/flags.make
+CMakeFiles/chat_server.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chat_server.dir/src/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chat_server.dir/src/main.cpp.o -c /home/leptis/CLionProjects/chat_server/src/main.cpp
 
-CMakeFiles/chat_server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leptis/CLionProjects/chat_server/main.cpp > CMakeFiles/chat_server.dir/main.cpp.i
+CMakeFiles/chat_server.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/src/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leptis/CLionProjects/chat_server/src/main.cpp > CMakeFiles/chat_server.dir/src/main.cpp.i
 
-CMakeFiles/chat_server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leptis/CLionProjects/chat_server/main.cpp -o CMakeFiles/chat_server.dir/main.cpp.s
+CMakeFiles/chat_server.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/src/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leptis/CLionProjects/chat_server/src/main.cpp -o CMakeFiles/chat_server.dir/src/main.cpp.s
+
+CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o: CMakeFiles/chat_server.dir/flags.make
+CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o: ../fastCGI/HTTP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o -c /home/leptis/CLionProjects/chat_server/fastCGI/HTTP.cpp
+
+CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leptis/CLionProjects/chat_server/fastCGI/HTTP.cpp > CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.i
+
+CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leptis/CLionProjects/chat_server/fastCGI/HTTP.cpp -o CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.s
+
+CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o: CMakeFiles/chat_server.dir/flags.make
+CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o: ../fastCGI/fcgi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o -c /home/leptis/CLionProjects/chat_server/fastCGI/fcgi.cpp
+
+CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leptis/CLionProjects/chat_server/fastCGI/fcgi.cpp > CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.i
+
+CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leptis/CLionProjects/chat_server/fastCGI/fcgi.cpp -o CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.s
+
+CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o: CMakeFiles/chat_server.dir/flags.make
+CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o: ../fastCGI/fcgiHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o -c /home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.cpp
+
+CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.cpp > CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.i
+
+CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leptis/CLionProjects/chat_server/fastCGI/fcgiHandler.cpp -o CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.s
 
 # Object files for target chat_server
 chat_server_OBJECTS = \
-"CMakeFiles/chat_server.dir/main.cpp.o"
+"CMakeFiles/chat_server.dir/src/main.cpp.o" \
+"CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o" \
+"CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o" \
+"CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o"
 
 # External object files for target chat_server
 chat_server_EXTERNAL_OBJECTS =
 
-chat_server: CMakeFiles/chat_server.dir/main.cpp.o
+chat_server: CMakeFiles/chat_server.dir/src/main.cpp.o
+chat_server: CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o
+chat_server: CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o
+chat_server: CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o
 chat_server: CMakeFiles/chat_server.dir/build.make
 chat_server: CMakeFiles/chat_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable chat_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leptis/CLionProjects/chat_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable chat_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chat_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
