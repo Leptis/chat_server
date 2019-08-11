@@ -17,13 +17,13 @@ services:
       - POSTGRES_DB=chat
 
   core:
-    image: chat_server:latest
+    image: leptis/chat_server:latest
     restart: always
     ports:
       - 9001:9001
 
   nginx:
-    image: mynginx
+    image: leptis/mynginx
     restart: always
     ports:
       - 9000:9000
