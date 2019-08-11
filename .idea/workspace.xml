@@ -11,13 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bb4cb06-bf83-41c2-85bd-f604b6019160" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat_server.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mynginx.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgres.tar" beforeDir="false" />
-    </list>
+    <list default="true" id="2bb4cb06-bf83-41c2-85bd-f604b6019160" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,12 +160,12 @@
       <updated>1565357160210</updated>
       <workItem from="1565357161476" duration="782000" />
       <workItem from="1565536110600" duration="5799000" />
-      <workItem from="1565555977192" duration="6111000" />
+      <workItem from="1565555977192" duration="6673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12692000" />
+    <option name="totallyTimeSpent" value="13254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="984" height="1041" extended-state="4" />
