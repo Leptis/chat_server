@@ -179,10 +179,10 @@ int main() {
     HTTP *request_handler = nullptr;
 
     std::ostringstream conn_string("");
-    conn_string << "host=" << "localhost"
+    conn_string << "host=" << "172.17.0.1"
                 << " user=" << "chat"
                 << " password=" << "123"
-                << " dbname=" << "chat_db";
+                << " dbname=" << "chat";
 
     pqxx::connection conn(conn_string.str());
 
