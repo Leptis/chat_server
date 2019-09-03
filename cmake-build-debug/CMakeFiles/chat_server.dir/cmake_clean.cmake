@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/chat_server.dir/src/main.cpp.o"
   "CMakeFiles/chat_server.dir/fastCGI/HTTP.cpp.o"
   "CMakeFiles/chat_server.dir/fastCGI/fcgi.cpp.o"
   "CMakeFiles/chat_server.dir/fastCGI/fcgiHandler.cpp.o"
-  "chat_server.pdb"
+  "CMakeFiles/chat_server.dir/src/main.cpp.o"
   "chat_server"
+  "chat_server.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

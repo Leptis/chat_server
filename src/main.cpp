@@ -172,17 +172,33 @@ string getMessages(pqxx::work *transaktion, HTTP *request_handler){
 
 int main() {
 
-
-
-    FCGIHandler *server_handler = new FCGIHandler(ServerParams("*", "9001", 1));
-    server_handler->StartServer();
-    HTTP *request_handler = nullptr;
-
     std::ostringstream conn_string("");
-    conn_string << "host=" << "172.17.0.1"
+    conn_string << "host=" << "db"
                 << " user=" << "chat"
                 << " password=" << "123"
                 << " dbname=" << "chat";
+
+    unsigned int tmp_time;
+
+    while(1) {
+        try {
+            pqxx::connection tmp(conn_string.str());
+            break;
+        } catch (pqxx::broken_connection) {
+            unsigned int new_time = time(NULL);
+            if (tmp_time != new_time) {
+                std::cout << "Waiting for db..." << std::endl;
+                tmp_time = new_time;
+            }
+
+        }
+    }
+
+    FCGIHandler *server_handler = new FCGIHandler(ServerParams("*", "9000", 1));
+    server_handler->StartServer();
+    HTTP *request_handler = nullptr;
+
+
 
     pqxx::connection conn(conn_string.str());
 

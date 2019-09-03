@@ -4,27 +4,41 @@ volumes:
   db: {}
 
 services:
+
+  nginx:
+    image: leptis/mynginx
+    restart: always
+    links:
+      - core:core
+    ports:
+      - 9000:9000
+
+  core:
+    image: leptis/chat_server:latest
+    restart: always
+    links:
+      - db:db
+    ports:
+      - 9000
+    depends_on:
+      - db
+
   db:
     image: postgres:latest
     restart: always
     volumes:
       - db:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - 5432
     environment:
       - POSTGRES_PASSWORD=123
       - POSTGRES_USER=chat
       - POSTGRES_DB=chat
 
-  core:
-    image: leptis/chat_server:latest
-    restart: always
-    ports:
-      - 9001:9001
 
-  nginx:
-    image: leptis/mynginx
-    restart: always
-    ports:
-      - 9000:9000
+
+
+
+
+
 
